@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>飞书多维表格链接采集器</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      width: 300px;
+      margin: 0;
+      padding: 16px;
+      color: #333;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 8px;
+    }
+    .header h1 {
+      font-size: 18px;
+      margin: 0;
+      color: #3370ff;
+    }
+    .action-button {
+      background-color: #3370ff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      padding: 10px 16px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .action-button:hover {
+      background-color: #2860e1;
+    }
+    .action-button:disabled {
+      background-color: #a0b4ff;
+      cursor: not-allowed;
+    }
+    .status {
+      padding: 10px;
+      border-radius: 4px;
+      font-size: 14px;
+      display: none;
+    }
+    .status.success {
+      background-color: #e6f7e6;
+      color: #2e7d32;
+      display: block;
+    }
+    .status.error {
+      background-color: #fdecea;
+      color: #c62828;
+      display: block;
+    }
+    .status.loading {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background-color: #e3f2fd;
+      color: #1565c0;
+    }
+    .spinner {
+      width: 16px;
+      height: 16px;
+      border: 2px solid #1565c0;
+      border-top: 2px solid transparent;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>飞书多维表格链接采集器</h1>
+    </div>
+    
+    <button id="saveButton" class="action-button">插入当前页面链接</button>
+    
+    <div id="statusContainer" class="status"></div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
