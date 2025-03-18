@@ -36,14 +36,17 @@
 
 ## 配置说明
 
-扩展已预配置以下飞书参数：
+本扩展需要配置飞书API参数才能正常工作。请在项目根目录创建`.env`文件，并按以下格式配置：
 
 ```
-FEISHU_APP_ID="cli_a75d4581c333901c"
-FEISHU_APP_SECRET="NYEnic0G01H1Jy7mtdiMXe6HEQVYrrJl"
-BASE_ID="JbVTbIZZGaC7nQsfv1BcaYNrneg"
-TABLE_ID="tbl3thMMWApyDAZc"
+FEISHU_APP_ID="你的飞书应用ID"
+FEISHU_APP_SECRET="你的飞书应用密钥"
+FEISHU_BASE_ID="多维表格ID"
+FEISHU_TABLE_ID="数据表ID"
+FEISHU_FIELD_NAME="链接"
 ```
+
+> 注意：请将配置文件中的值替换为你自己的飞书应用参数。
 
 ## 安装方法
 

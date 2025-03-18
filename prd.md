@@ -31,12 +31,15 @@
 
 ### 2.2 技术参数
 1. **飞书配置**
+   - 在项目根目录创建`.env`文件
+   - 配置以下环境变量：
    ```
-   FEISHU_APP_ID="cli_a75d4581c333901c"
-   FEISHU_APP_SECRET="NYEnic0G01H1Jy7mtdiMXe6HEQVYrrJl"
-   BASE_ID="JbVTbIZZGaC7nQsfv1BcaYNrneg"
-   TABLE_ID="tbl3thMMWApyDAZc"
+   FEISHU_APP_ID="你的飞书应用ID"
+   FEISHU_APP_SECRET="你的飞书应用密钥"
+   BASE_ID="多维表格ID"
+   TABLE_ID="表格ID"
    ```
+   > 注意：请将配置项替换为实际的值，并确保`.env`文件已添加到`.gitignore`中
 
 2. **字段配置**
    - 字段名称：链接

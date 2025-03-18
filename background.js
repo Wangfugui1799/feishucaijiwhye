@@ -6,8 +6,14 @@ const FEISHU_CONFIG = {
   APP_SECRET: 'NYEnic0G01H1Jy7mtdiMXe6HEQVYrrJl',
   BASE_ID: 'JbVTbIZZGaC7nQsfv1BcaYNrneg',
   TABLE_ID: 'tbl3thMMWApyDAZc',
-  FIELD_NAME: '链接' // 字段名称
+  FIELD_NAME: '链接'
 };
+
+// 初始化配置到chrome.storage
+chrome.storage.local.set(FEISHU_CONFIG, () => {
+  console.log('飞书配置已初始化');
+});
+
 
 // 飞书API接口
 const FEISHU_API = {
